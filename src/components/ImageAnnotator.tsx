@@ -219,9 +219,9 @@ export default function ImageAnnotator({ imageUrl, imageAlt = 'Annotated image' 
       </div>
 
       {/* Contenedor principal */}
-      <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+      <div className="flex-1 flex flex-col md:flex-row overflow-hidden bg-gray-100 p-4">
         {/* Área de imagen */}
-        <div ref={containerRef} className="flex-1 relative overflow-hidden bg-gray-400">
+        <div ref={containerRef} className="flex-1 relative overflow-hidden bg-white rounded-xl shadow-lg flex items-center justify-center">
           {/* Botón para abrir panel de comentarios en móvil */}
           <button
             onClick={() => setIsCommentsPanelOpen(true)}
@@ -255,7 +255,7 @@ export default function ImageAnnotator({ imageUrl, imageAlt = 'Annotated image' 
               <>
                 <TransformComponent wrapperClass="w-full h-full">
                   <div 
-                    className="relative w-full h-full flex items-center justify-center bg-white"
+                    className="relative w-full h-full flex items-center justify-center p-4"
                     onClick={handleImageClick}
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
@@ -266,7 +266,7 @@ export default function ImageAnnotator({ imageUrl, imageAlt = 'Annotated image' 
                       ref={imageRef}
                       src={imageUrl}
                       alt={imageAlt}
-                      className={`max-w-full max-h-full object-contain select-none ${
+                      className={`max-w-full max-h-full object-contain select-none border-2 border-gray-200 rounded-lg ${
                         annotationMode ? 'cursor-crosshair' : 'cursor-grab'
                       }`}
                       draggable={false}
