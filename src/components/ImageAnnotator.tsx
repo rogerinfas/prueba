@@ -175,7 +175,7 @@ export default function ImageAnnotator({ imageUrl, imageAlt = 'Annotated image' 
   const zoomButtonClass = "p-2 sm:p-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed";
 
   return (
-    <div className="w-full h-screen flex flex-col bg-gradient-to-br from-blue-50 to-gray-100">
+    <div className="flex flex-col h-full bg-gradient-to-br from-blue-50 to-gray-100">
       {/* Header con controles de zoom */}
       <div className="bg-white shadow-md p-2 sm:p-4 flex items-center justify-between gap-2">
         <h2 className="text-sm sm:text-lg md:text-xl font-semibold text-gray-800 truncate">
@@ -219,9 +219,9 @@ export default function ImageAnnotator({ imageUrl, imageAlt = 'Annotated image' 
       </div>
 
       {/* Contenedor principal */}
-      <div className="flex-1 flex flex-col md:flex-row overflow-hidden bg-gray-100 p-4">
+      <div className="flex-1 flex flex-col md:flex-row overflow-hidden p-6">
         {/* Área de imagen */}
-        <div ref={containerRef} className="flex-1 relative overflow-hidden bg-white rounded-xl shadow-lg flex items-center justify-center">
+        <div ref={containerRef} className="flex-1 relative overflow-hidden bg-white rounded-xl shadow-lg flex items-center justify-center border-2 border-gray-200 max-w-[90vw] max-h-[80vh] w-full">
           {/* Botón para abrir panel de comentarios en móvil */}
           <button
             onClick={() => setIsCommentsPanelOpen(true)}

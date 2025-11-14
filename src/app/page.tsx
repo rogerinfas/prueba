@@ -5,7 +5,7 @@ export default function Home() {
   const imageUrl = '/1010-595-max.png';
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen bg-gray-300">
       <ImageAnnotator 
         imageUrl={imageUrl}
         imageAlt="Dibujo técnico de moda - Blusa cropped"
